@@ -10,7 +10,13 @@ export async function getSortedPosts(): Promise<
     return import.meta.env.PROD ? data.draft !== true : true
   })) as unknown as { body: string, data: BlogPostData; slug: string }[]
 
-  const sorted = allBlogPosts.sort(
+  const browserLanguage = navigator.language || 'en';
+
+  const sorted = allBlogPosts.filter(b => {
+    const blogLanguage = b.data.lang
+    return blogLanguage ? browserLanguage.startsWith(blogLanguage) : true
+  })
+  .sort(
     (a: { data: BlogPostData }, b: { data: BlogPostData }) => {
       const dateA = new Date(a.data.published)
       const dateB = new Date(b.data.published)
