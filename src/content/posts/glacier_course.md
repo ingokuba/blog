@@ -5,8 +5,7 @@ description: 'Glacier Course on the Großvenediger'
 image: ''
 tags: [Alpine Tour, Mountains]
 category: Blog
-draft: false
-lang: en
+draft: false 
 ---
 
 # Glacier course on the [Großvenediger](https://www.osttirol.com/entdecken-und-erleben/sommer/wandern/detail/grossvenediger-3657-m-defregger-haus/)

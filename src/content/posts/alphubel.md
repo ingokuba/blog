@@ -6,7 +6,6 @@ image: ''
 tags: [Alpine Tour, Mountains]
 category: Blog
 draft: false
-lang: en
 ---
 
 # Alpine tour to the [Alphubel](https://www.sac-cas.ch/de/huetten-und-touren/sac-tourenportal/alphubel-7757/hochtouren/von-der-taeschhuette-sac-ueber-den-suedost-grat-eisnase-647/)
