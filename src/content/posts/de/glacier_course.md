@@ -1,14 +1,15 @@
 ---
-title: Glacier Course
+title: Hochtourenkurs
 published: 2024-08-16
-description: 'Glacier Course on the Großvenediger'
+description: 'Hochtourenkurs auf dem Großvenediger'
 image: ''
 tags: [Alpine Tour, Mountains]
 category: Blog
-draft: false 
+draft: false
+lang: de
 ---
 
-# Glacier course on the [Großvenediger](https://www.osttirol.com/entdecken-und-erleben/sommer/wandern/detail/grossvenediger-3657-m-defregger-haus/)
+# Hochtourenkurs auf dem [Großvenediger](https://www.osttirol.com/entdecken-und-erleben/sommer/wandern/detail/grossvenediger-3657-m-defregger-haus/)
 
 In this course we learned how to walk on a glacier and how to save us and others from crevasses.
 

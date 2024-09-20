@@ -2,6 +2,7 @@ import { getCollection } from 'astro:content'
 import type { BlogPostData } from '@/types/config'
 import I18nKey from '@i18n/i18nKey'
 import { i18n } from '@i18n/translation'
+import { language } from '@utils/i18n-utils'
 
 export async function getSortedPosts(): Promise<
   { body: string, data: BlogPostData; slug: string }[]
@@ -10,7 +11,9 @@ export async function getSortedPosts(): Promise<
     return import.meta.env.PROD ? data.draft !== true : true
   })) as unknown as { body: string, data: BlogPostData; slug: string }[]
 
-  const sorted = allBlogPosts.sort(
+  const sorted = allBlogPosts.filter((post) => {
+    return language.startsWith(post.data.lang)
+  }).sort(
     (a: { data: BlogPostData }, b: { data: BlogPostData }) => {
       const dateA = new Date(a.data.published)
       const dateB = new Date(b.data.published)
