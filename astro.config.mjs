@@ -34,6 +34,13 @@ export default defineConfig({
   site: "https://ingokuba.github.io/",
   base: "blog",
   trailingSlash: "always",
+  i18n: {
+    defaultLocale: "en",
+    locales: ["de", "en"],
+    routing: {
+      prefixDefaultLocale: true
+    }
+  },
   integrations: [
     tailwind(),
     swup({

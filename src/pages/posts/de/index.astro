@@ -1,0 +1,7 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const aboutURL = getRelativeLocaleUrl("de", "posts");
+---
+
+<a href={getRelativeLocaleUrl('de', 'blog')}>Blog</a>
