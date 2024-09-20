@@ -1,4 +1,4 @@
-name: Deploy english version to GitHub Pages
+name: Deploy German version to GitHub Pages
 
 on:
   # Trigger the workflow every time you push to the `main` branch
