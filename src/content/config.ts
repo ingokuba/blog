@@ -19,6 +19,5 @@ const postsCollection = defineCollection({
   }),
 })
 export const collections = {
-  'posts/en': postsCollection,
-  'posts/de': postsCollection,
+  posts: postsCollection,
 }

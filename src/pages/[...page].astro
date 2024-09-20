@@ -6,18 +6,36 @@ import { PAGE_SIZE } from '../constants/constants'
 import MainGridLayout from '../layouts/MainGridLayout.astro'
 import { getSortedPosts } from '../utils/content-utils'
 
-export const getStaticPaths = (async ({ paginate }) => {
-  const allBlogPosts = await getSortedPosts()
-  return paginate(allBlogPosts, { pageSize: PAGE_SIZE })
-}) satisfies GetStaticPaths
-// https://github.com/withastro/astro/issues/6507#issuecomment-1489916992
+const languages = ['en', 'de']
 
-const { page } = Astro.props
+export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
+  const allBlogPosts = await getSortedPosts()
+
+  const paths = []
+  for (const lang of languages) {
+    const paginated = paginate(allBlogPosts, { pageSize: PAGE_SIZE })
+    for (const path of paginated) {
+      paths.push({
+        params: {
+          page: path.params.page,
+        },
+        props: {
+          lang,  // Pass language to each page
+          ...path.props
+        },
+        route: `/${lang}/${path.route}` // Add language prefix to the route
+      })
+    }
+  }
+  return paths
+}
+
+const { page, lang } = Astro.props
 
 const len = page.data.length
 ---
 
-<MainGridLayout>
-    <PostPage page={page}></PostPage>
+<MainGridLayout lang={lang}> <!-- Pass language prop down -->
+    <PostPage page={page} lang={lang}></PostPage>
     <Pagination class="mx-auto onload-animation" page={page} style=`animation-delay: calc(var(--content-delay) + ${(len)*50}ms)`></Pagination>
 </MainGridLayout>
