@@ -5,11 +5,12 @@ import type {
   SiteConfig,
 } from './types/config'
 import { LinkPreset } from './types/config'
+import { language } from '@utils/i18n-utils'
 
 export const siteConfig: SiteConfig = {
   title: 'Home',
   subtitle: 'GitGram',
-  lang: 'en',         // 'en', 'de'
+  lang: language,         // 'en', 'de'
   themeColor: {
     hue: 250,         // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
     fixed: false,     // Hide the theme color picker for visitors

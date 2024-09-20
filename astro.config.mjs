@@ -18,6 +18,7 @@ import { GithubCardComponent } from "./src/plugins/rehype-component-github-card.
 import {parseDirectiveNode} from "./src/plugins/remark-directive-rehype.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs"
 import {remarkExcerpt} from "./src/plugins/remark-excerpt.js";
+import { language } from "./src/utils/i18n-utils.ts"
 
 const oklchToHex = (str) => {
   const DEFAULT_HUE = 250
@@ -32,7 +33,7 @@ const oklchToHex = (str) => {
 // https://astro.build/config
 export default defineConfig({
   site: "https://ingokuba.github.io/",
-  base: "blog",
+  base: `blog/${language}`,
   trailingSlash: "always",
   integrations: [
     tailwind(),
