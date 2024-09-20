@@ -16,11 +16,11 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      LANG: en
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-      - name: Replace language
-        run: sed -i 's|import.meta.env.LANG|'\"en\"'|g' src/utils/i18n-utils.ts
       - name: Install, build, and upload your site
         uses: withastro/action@v3
         with:
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}/en
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
