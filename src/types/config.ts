@@ -69,7 +69,6 @@ export type LIGHT_DARK_MODE =
   | typeof AUTO_MODE
 
 export type BlogPostData = {
-  slug: string
   body: string
   title: string
   published: Date

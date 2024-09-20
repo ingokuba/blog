@@ -1,5 +1,4 @@
 ---
-slug: hochtourenkurs
 title: Hochtourenkurs
 published: 2024-08-16
 description: 'Hochtourenkurs auf dem Großvenediger'
