@@ -1,4 +1,5 @@
 ---
+slug: hochtour-alphubel
 title: Alphubel 4206m
 published: 2024-09-08
 description: 'Hochtour auf den Alphubel (4206m)'

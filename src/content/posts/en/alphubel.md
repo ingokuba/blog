@@ -1,4 +1,5 @@
 ---
+slug: alphubel
 title: Alphubel 4206m
 published: 2024-09-08
 description: 'Alpine tour to the Alphubel (4206m)'

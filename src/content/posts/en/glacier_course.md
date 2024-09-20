@@ -1,4 +1,5 @@
 ---
+slug: glacier-course
 title: Glacier Course
 published: 2024-08-16
 description: 'Glacier Course on the Großvenediger'
