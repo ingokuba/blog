@@ -1,9 +1,9 @@
-name: Deploy to GitHub Pages
+name: Deploy english version to GitHub Pages
 
 on:
   # Trigger the workflow every time you push to the `main` branch
   push:
-    branches: [ main ]
+    branches: [main]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+      - name: Replace language
+        run: sed -i 's|import.meta.env.LANG|'\"de\"'|g' src/utils/i18n-utils.ts
       - name: Install, build, and upload your site
         uses: withastro/action@v3
         with:
