@@ -45,10 +45,10 @@ function hidePanel() {
 <div class="relative z-50" role="menu" tabindex="-1" on:mouseleave={hidePanel}>
     <button aria-label="Language" role="menuitem" class="relative btn-plain scale-animation rounded-lg h-11 w-11 active:scale-90" id="scheme-switch" on:click={toggleLang} on:mouseenter={showPanel}>
         <div class="absolute" class:opacity-0={lang !== "en"}>
-            <Icon icon="svelte-flag-icons:gb" class="text-[1.25rem]"></Icon>
+            <Icon icon="flag:gb-1x1" class="text-[1.25rem]"></Icon>
         </div>
         <div class="absolute" class:opacity-0={lang !== "de"}>
-            <Icon icon="" class="text-[1.25rem]"></Icon>
+            <Icon icon="flag:de-1x1" class="text-[1.25rem]"></Icon>
         </div>
     </button>
 
@@ -58,14 +58,14 @@ function hidePanel() {
                     class:current-theme-btn={lang === "en"}
                     on:click={() => switchLanguage("en")}
             >
-                <Icon icon="svelte-flag-icons:gb" class="text-[1.25rem] mr-3"></Icon>
+                <Icon icon="flag:gb-1x1" class="text-[1.25rem] mr-3"></Icon>
                 {i18n(I18nKey.english)}
             </button>
             <button class="flex transition whitespace-nowrap items-center justify-start w-full btn-plain scale-animation rounded-lg h-9 px-3 font-medium active:scale-95 mb-0.5"
                     class:current-theme-btn={lang === "de"}
                     on:click={() => switchLanguage("de")}
             >
-                <Icon icon="material-symbols:dark-mode-outline-rounded" class="text-[1.25rem] mr-3"></Icon>
+                <Icon icon="flag:de-1x1" class="text-[1.25rem] mr-3"></Icon>
                 {i18n(I18nKey.german)}
             </button>
         </div>
