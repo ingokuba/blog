@@ -12,7 +12,7 @@ const seq: string[] = ["en", "de"]
 let lang: string = "en"
 
 onMount(() => {
-  lang = getLanguage()
+  lang = navigator.language.substring(0, 2) || 'en'
 })
 
 function switchLanguage(newLang: string) {
